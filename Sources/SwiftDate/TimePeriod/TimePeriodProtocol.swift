@@ -207,7 +207,7 @@ public extension TimePeriodProtocol {
 		//Make sure time periods are of positive durations
 		guard start! < end! && period.start! < period.end! else { return .none }
 		//Make comparisons
-		if period.start! < start! {
+		if period.end! < start! {
 			return .after
 		} else if period.end! == start! {
 			return .startTouching
